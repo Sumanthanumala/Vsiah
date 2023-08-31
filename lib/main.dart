@@ -11,10 +11,10 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ScreenUtilInit(
-      designSize: Size(428, 926),
+      designSize: const Size(428, 926),
       child: GetMaterialApp(
         theme: ThemeData(
-            datePickerTheme: DatePickerThemeData(
+            datePickerTheme: const DatePickerThemeData(
           yearForegroundColor: MaterialStatePropertyAll(Color(0xFF002664)),
           headerBackgroundColor: Color(0xFF002664),
                 )),

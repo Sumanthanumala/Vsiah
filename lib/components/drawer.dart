@@ -38,7 +38,7 @@ class Drawerbar extends StatelessWidget {
                                 fontWeight: FontWeight.w400,
                                 fontSize: 18.sp,
                                 color: const Color(0xFF3540A7))),
-                        InkWell( onTap: () => Get.to(Editprofile()),
+                        InkWell( onTap: () => Get.to(const Editprofile()),
                           child: Container(
                             width: 92.w,
                             height: 31.h,
