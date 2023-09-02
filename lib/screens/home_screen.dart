@@ -207,7 +207,7 @@ class Homescreen extends StatelessWidget {
   Widget homemenu() {
     List Items = [
       {
-        "Images": "assets/images/managereport.png",
+        "Images": "assets/images/medical.png",
         "name": "Medical Reports \n E-Storage"
       },
       {
@@ -215,11 +215,11 @@ class Homescreen extends StatelessWidget {
         "name": "Manage Family Member's Reports"
       },
       {
-        "Images": "assets/images/sharereport.png",
-        "name": "Shar Files Securely \n to Doctors"
+        "Images": "assets/images/share.png",
+        "name": "Share Files Securely \n to Doctors"
       },
       {
-        "Images": "assets/images/reminderdoctor.png",
+        "Images": "assets/images/remainder.png",
         "name": "Set Reminders \n With Doctors"
       },
     ];
@@ -234,17 +234,23 @@ class Homescreen extends StatelessWidget {
         itemBuilder: (context, index) {
           return Column(
             children: [
-              Container(
-                  height: 120.h,
-                  width: 160.w,
-                  decoration: BoxDecoration(
-                      border: Border.all(width: 1.sp, color: Colors.grey),
-                      color: Colors.grey.shade300,
-                      borderRadius: BorderRadius.only(
-                          topLeft: Radius.circular(20.r),
-                          topRight: Radius.circular(20.r))),
-                  child: Image.asset(Items[index]["Images"],
-                      alignment: Alignment.bottomCenter)),
+              Stack(
+                children: [
+                  Container(
+                      height: 120.h,
+                      width: 160.w,
+                      decoration: BoxDecoration(
+                          border: Border.all(width: 1.sp, color: Colors.grey),
+                          color: Colors.grey.shade300,
+                          borderRadius: BorderRadius.only(
+                              topLeft: Radius.circular(20.r),
+                              topRight: Radius.circular(20.r)))),
+                  Positioned(top: 20.0,right: 4.0,
+                    child: SizedBox(width: 173.w,height: 110.h,
+                        child: Image.asset(Items[index]["Images"],)),
+                  )
+                ],
+              ),
               Container(
                 decoration: BoxDecoration(
                     borderRadius: BorderRadius.only(
