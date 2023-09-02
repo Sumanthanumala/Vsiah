@@ -8,5 +8,4 @@ class Dashboardcontroller extends GetxController{
     Appointment(),
     Dietplan()
   ];
-
 }
