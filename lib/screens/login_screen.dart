@@ -106,6 +106,7 @@ class Login extends StatelessWidget {
                 text: 'Get OTP',
                 color: const Color(0xFFF2796B),
                 ontap: () {
+                  print(logincontroller.isPatient.value);
                   logincontroller.check(logincontroller.mobilecontroller.text);
                 }),
           ]),

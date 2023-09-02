@@ -31,11 +31,11 @@ class Otpcontroller extends GetxController {
   void verify() {
     if (pincontroller.text == otp) {
       if(logincontroller.isPatient.value==true){
-        Get.to(Dashboard());
+        Get.offAll(Dashboard());
         print('patientScreen');
       }
       else if(logincontroller.isPatient.value==false){
-        Get.to(Dhome());
+        Get.offAll(Dhome());
         print('Doctor Screen');
       }
     } else {
