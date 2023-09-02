@@ -4,6 +4,7 @@ class Logincontroller extends GetxController {
 
   var mobilecontroller = TextEditingController();
   var validate=false.obs;
+  var isPatient=true.obs;
 
   void check(String number) {
     if (number.isNotEmpty && number.length == 10) {

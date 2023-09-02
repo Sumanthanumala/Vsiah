@@ -1,4 +1,5 @@
 import 'package:vsiah/utils/export.dart';
+import 'package:toggle_switch/toggle_switch.dart';
 
 class Login extends StatelessWidget {
   Login({super.key});
@@ -68,48 +69,24 @@ class Login extends StatelessWidget {
             SizedBox(
               height: 10.h,
             ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                InkWell(onTap: () {},
-                  child: Container(
-                    width: 103.w,
-                    height: 36.h,
-                    decoration: BoxDecoration(
-                        color: const Color(0xFFFBBC05),
-                        borderRadius: BorderRadius.only(
-                            topLeft: Radius.circular(15.r),
-                            bottomLeft: Radius.circular(15.r))),
-                    child: Align(
-                      alignment: Alignment.center,
-                      child: Text('Patient',
-                          style: GoogleFonts.inter(
-                              fontWeight: FontWeight.w600,
-                              fontSize: 13.sp,
-                              color: Colors.white)),
-                    ),
-                  ),
-                ),
-                InkWell(onTap: () {},
-                  child: Container(
-                    width: 103.w,
-                    height: 36.h,
-                    decoration: BoxDecoration(
-                      color: const Color(0xFF283ED3),
-                        borderRadius: BorderRadius.only(
-                            topRight: Radius.circular(15.r),
-                            bottomRight: Radius.circular(15.r))),
-                    child: Align(
-                      alignment: Alignment.center,
-                      child: Text('Doctor',
-                          style: GoogleFonts.inter(
-                              fontWeight: FontWeight.w600,
-                              fontSize: 13.sp,
-                              color: Colors.white)),
-                    ),
-                  ),
-                ),
-              ],
+            ToggleSwitch(
+              totalSwitches: 2,
+              inactiveFgColor: const Color.fromRGBO(18, 42, 84, 1),
+              minWidth: 98.w,
+              minHeight: 36.h,
+              labels: const ['Patient','Doctor'],
+              activeFgColor: Colors.white,
+              activeBgColor: const [Color.fromRGBO(18, 42, 84, 1)],
+              fontSize: 13.sp,
+              centerText: true,
+              onToggle: (index) {
+                if(index==0){
+                logincontroller.isPatient.value=true;
+                }
+                else{
+                 logincontroller.isPatient.value=false;
+                }
+              },
             ),
             SizedBox(
               height: 34.h,
@@ -126,7 +103,8 @@ class Login extends StatelessWidget {
               height: 16.h,
             ),
             ButtonElevated(
-                text: 'Get OTP',color: const Color(0xFFF2796B),
+                text: 'Get OTP',
+                color: const Color(0xFFF2796B),
                 ontap: () {
                   logincontroller.check(logincontroller.mobilecontroller.text);
                 }),

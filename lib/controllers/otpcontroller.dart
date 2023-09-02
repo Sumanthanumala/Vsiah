@@ -1,5 +1,7 @@
 import 'dart:async';
 
+import 'package:vsiah/screens/doctor_home.dart';
+
 import '../utils/export.dart';
 
 class Otpcontroller extends GetxController {
@@ -8,6 +10,7 @@ class Otpcontroller extends GetxController {
   var otp = '123456';
   var otpentered = ''.obs;
   var start = 15.obs;
+  Logincontroller logincontroller = Get.put(Logincontroller());
 
   @override
   void onInit() {
@@ -27,9 +30,18 @@ class Otpcontroller extends GetxController {
 
   void verify() {
     if (pincontroller.text == otp) {
-      Get.off(Dashboard());
+      if(logincontroller.isPatient.value==true){
+        Get.to(Dashboard());
+        print('patientScreen');
+      }
+      else if(logincontroller.isPatient.value==false){
+        Get.to(Dhome());
+        print('Doctor Screen');
+      }
     } else {
       Get.snackbar('','Enter valid otp', snackPosition: SnackPosition.BOTTOM);
     }
   }
+
+
 }
