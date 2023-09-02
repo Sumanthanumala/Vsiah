@@ -17,27 +17,28 @@ class Dashboard extends StatelessWidget {
               onTap: (value) {
                 dashboardcontroller.index.value = value;
               },
-              selectedIconTheme: const IconThemeData(color: Color(0xFF122A54)),
+              selectedIconTheme:
+                  const IconThemeData(color: Color(0xFF122A54), size: 24),
               selectedLabelStyle: GoogleFonts.inter(
-                fontWeight: FontWeight.w400,
+                fontSize: 14.sp,
+                fontWeight: FontWeight.w800,
               ),
+              selectedFontSize: 14.sp,
               selectedItemColor: const Color(0xFF122A54),
-              selectedFontSize: 10.sp,
               unselectedIconTheme:
-                  const IconThemeData(color: Color(0xFFADADAD)),
+                  const IconThemeData(color: Color(0xFFADADAD), size: 24),
               unselectedLabelStyle: GoogleFonts.inter(
-                fontWeight: FontWeight.w400,
+                fontWeight: FontWeight.w500,
               ),
               unselectedItemColor: const Color(0xFFADADAD),
-              unselectedFontSize: 10.sp,
+              unselectedFontSize: 14.sp,
               currentIndex: dashboardcontroller.index.value,
               items: const [
                 BottomNavigationBarItem(icon: Icon(Icons.home), label: 'Home'),
                 BottomNavigationBarItem(
-                    icon: Icon(Icons.calendar_today_outlined),
-                    label: 'Appointments'),
+                    icon: Icon(Icons.date_range_rounded), label: 'Reminders'),
                 BottomNavigationBarItem(
-                    icon: Icon(Icons.file_present), label: 'Diet Plan')
+                    icon: Icon(Icons.text_snippet_rounded), label: 'Diet Plan')
               ]),
         ));
   }

@@ -8,8 +8,8 @@ class Logincontroller extends GetxController {
 
   void check(String number) {
     if (number.isNotEmpty && number.length == 10) {
-      Get.off(Otpscreen());
       validate.value=false;
+      Get.off(Otpscreen());
     } else {
       validate.value=true;
       error();
