@@ -14,7 +14,7 @@ export 'package:pinput/pinput.dart';
 export 'package:vsiah/controllers/logincontroller.dart';
 export 'package:vsiah/controllers/dashboardcontroller.dart';
 export 'package:vsiah/controllers/formcontroller.dart';
-
+export 'package:vsiah/controllers/bookremindercontroller.dart';
 //screens
 
 export 'package:vsiah/screens/splash_screen.dart';
@@ -29,6 +29,8 @@ export 'package:vsiah/screens/activeplans.dart';
 export 'package:vsiah/screens/feedback.dart';
 export 'package:vsiah/screens/members.dart';
 export 'package:vsiah/screens/editprofile.dart';
+export 'package:vsiah/screens/bookreminder.dart';
+
 
 //components
 export 'package:vsiah/components/custom_textfield.dart';
@@ -39,3 +41,4 @@ export 'package:vsiah/components/newelevatedbutton.dart';
 export 'package:vsiah/components/login_image.dart';
 export 'package:vsiah/components/elevatedbutton.dart';
 export 'package:vsiah/components/custom_appbar.dart';
+export 'package:vsiah/components/customremindertextfiled.dart';

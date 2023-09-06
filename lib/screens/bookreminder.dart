@@ -1,10 +1,9 @@
-import 'package:vsiah/components/customremindertextfiled.dart';
-import 'package:vsiah/controllers/bookremindercontroller.dart';
-
 import '../utils/export.dart';
 
 class Bookreminder extends StatelessWidget {
   Bookremindercontroller remindercontroller = Get.put(Bookremindercontroller());
+
+  Bookreminder({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -38,28 +37,29 @@ class Bookreminder extends StatelessWidget {
               height: 20.h,
             ),
             Obx(() => Remindertextfield(
-              errortext: remindercontroller.error(),
-              controller: remindercontroller.doctoremail,
-              hinttext: 'Enter email address',
-              labeltext: "Doctor's Email",
-            )),
+                  errortext: remindercontroller.error(),
+                  controller: remindercontroller.doctoremail,
+                  hinttext: 'Enter email address',
+                  labeltext: "Doctor's Email",
+                )),
             SizedBox(
               height: 20.h,
             ),
-            Obx(() =>Remindertextfield(
-              labeltext: 'Reminder Date',
-              hinttext: 'Select Date',
-              errortext: remindercontroller.error(),              controller: remindercontroller.reminderdate,
-              readonly: true,
-              suffixicon: InkWell(
-                onTap: () => remindercontroller.appointmentdate(),
-                child: Padding(
-                  padding: EdgeInsets.only(right: 16.w),
-                  child: Icon(Icons.calendar_today_rounded,
-                      color: Colors.black, size: 24.sp),
-                ),
-              ),
-            )),
+            Obx(() => Remindertextfield(
+                  labeltext: 'Reminder Date',
+                  hinttext: 'Select Date',
+                  errortext: remindercontroller.error(),
+                  controller: remindercontroller.reminderdate,
+                  readonly: true,
+                  suffixicon: InkWell(
+                    onTap: () => remindercontroller.appointmentdate(),
+                    child: Padding(
+                      padding: EdgeInsets.only(right: 16.w),
+                      child: Icon(Icons.calendar_today_rounded,
+                          color: Colors.black, size: 24.sp),
+                    ),
+                  ),
+                )),
             SizedBox(
               height: 20.h,
             ),

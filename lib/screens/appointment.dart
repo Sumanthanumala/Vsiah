@@ -1,6 +1,3 @@
-
-import 'package:vsiah/screens/bookreminder.dart';
-
 import '../utils/export.dart';
 
 class Appointment extends StatelessWidget {

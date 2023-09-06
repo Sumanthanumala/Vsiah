@@ -1,6 +1,5 @@
 import 'package:vsiah/utils/export.dart';
 
-
 class Remindertextfield extends StatelessWidget {
   TextEditingController? controller;
   String? hinttext;
@@ -9,7 +8,8 @@ class Remindertextfield extends StatelessWidget {
   bool? readonly = false;
   int? maxlength;
   bool? expands = false;
-  String  ? errortext;
+  String? errortext;
+
   Remindertextfield({
     this.controller,
     this.hinttext,
