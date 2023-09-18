@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "909919373592",
+    "project_id": "vsiah-672ab",
+    "storage_bucket": "vsiah-672ab.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:909919373592:android:ad15d36264747f7ad0366d",
+        "android_client_info": {
+          "package_name": "com.example.vsiah"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBzbUVxjtAEuwYh0z3eQBdxshmsJFZzeDw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
